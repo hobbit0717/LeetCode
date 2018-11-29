@@ -1,1 +1,16 @@
 # Two sum
+
+class Solution:
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
+        basket = {}
+
+        for i, n in enumerate(nums):
+            if target - n in basket:
+                return [basket[target - n], i]
+            basket[n] = i
