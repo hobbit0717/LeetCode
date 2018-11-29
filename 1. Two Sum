@@ -12,8 +12,10 @@ class Solution:
         
         # for loop to put elem and its index to basket
         for i, n in enumerate(nums):
+        
             # if required elem is found, return its index and current's i's index
             if target - n in basket:
                 return [basket[target - n], i]
+                
             # if not found, put elem and its index to basket
             basket[n] = i
